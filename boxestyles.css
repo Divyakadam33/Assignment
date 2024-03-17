@@ -1,0 +1,39 @@
+.parent{
+    width: 500px;
+    height: 500px;
+    border: 3px solid #000;
+    border-radius: 50%;
+    position: relative;
+    
+  }
+  
+  .child{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    top: -25px; 
+    left: -25px;
+    animation: rotate 7s linear infinite; 
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform-origin: top left;
+      transform: rotate(0deg);
+      top: -25px; 
+      left: -25px;
+    }
+    50% {
+      transform-origin: top right;
+      transform: rotate(90deg);
+      top: -25px; 
+      left: calc(100% - 25px); 
+    }
+    100% {
+      transform-origin: top left;
+      transform: rotate(360deg);
+      top: calc(100% - 25px); 
+      left: calc(100% - 25px); 
+    }
+  }
